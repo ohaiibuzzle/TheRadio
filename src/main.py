@@ -7,6 +7,11 @@ try:
 except ImportError:
     pass
 
+# Check if config exists
+if not os.path.exists("config.json"):
+    print("Config file not found. Please create a config.json file.")
+    exit(1)
+
 # Load config
 with open("config.json") as f:
     config = json.load(f)

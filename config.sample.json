@@ -1,0 +1,14 @@
+{
+    "token": "",
+    "prefix": "!",
+    "voice_channels": [
+        "voice_channel_id"
+    ],
+    "shuffle": true,
+    "playlist": [
+        {
+            "title": "Song Title",
+            "url": "https://www.youtube.com/watch?v=video_id"
+        }
+    ]
+}
