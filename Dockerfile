@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 # Install Python3 and pip
-RUN apk add --no-cache python3
+RUN apk add --no-cache python3 ffmpeg
 RUN python3 -m ensurepip
 
 # Install pip requirements
