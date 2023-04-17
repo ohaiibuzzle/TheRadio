@@ -96,13 +96,20 @@ class VoiceState:
                 continue
             self.next.clear()
             self.current = self.playlist.get()
-            self.current.source = await ytdlp_interface.YTDLPSource.from_url(
-                self.current.url, loop=self.bot.loop
-            )
-            self.voice.play(self.current.source, after=self.play_next_song)
+            try:
+                self.current.source = (
+                    await ytdlp_interface.YTDLPSource.from_url(
+                        self.current.url, loop=self.bot.loop
+                    )
+                )
+                self.voice.play(self.current.source, after=self.play_next_song)
+            except Exception as e:
+                print(e)
+                self.play_next_song()
             await self.next.wait()
 
     def play_next_song(self, error=None):
         if error:
             raise VoiceError(str(error))
+        del self.current.source
         self.next.set()

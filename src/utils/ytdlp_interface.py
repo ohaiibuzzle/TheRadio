@@ -18,7 +18,8 @@ YTDLP_OPTIONS = {
 
 FFMPEG_OPTS = {
     "before_options": "-loglevel quiet -reconnect 1 -reconnect_streamed 1\
-          -reconnect_delay_max 5",
+          -reconnect_delay_max 5 -reconnect_on_network_error 1\
+              -reconnect_on_http_error 1",
     "options": "-vn",
 }
 
