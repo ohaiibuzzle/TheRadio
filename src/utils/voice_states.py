@@ -96,6 +96,8 @@ class VoiceState:
                 continue
             self.next.clear()
             self.current = self.playlist.get()
+            if self.current.source is not None:
+                del self.current.source
             try:
                 self.current.source = (
                     await ytdlp_interface.YTDLPSource.from_url(
