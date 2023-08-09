@@ -1,8 +1,4 @@
-FROM alpine:latest
-
-# Install Python3 and pip
-RUN apk add --no-cache python3 ffmpeg
-RUN python3 -m ensurepip
+FROM python:3.11-slim
 
 # Install pip requirements
 COPY requirements.txt /tmp/requirements.txt
