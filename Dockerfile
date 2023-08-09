@@ -1,5 +1,7 @@
 FROM python:3.11-slim
 
+RUN apt-get update && apt-get install ffmpeg -y
+
 # Install pip requirements
 COPY requirements.txt /tmp/requirements.txt
 
