@@ -3,8 +3,10 @@ name: Test dependancy compatibility
 on:
   push:
    paths: requirements.txt
+   branches: ['senpai']
   pull_request:
    paths: requirements.txt
+   branches: ['senpai']
 
 jobs:
   test_deps:
