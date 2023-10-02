@@ -2,6 +2,7 @@ import asyncio
 import itertools
 import json
 import random
+import time
 
 import discord
 from discord.ext import commands
@@ -112,6 +113,8 @@ class VoiceState:
 
     def play_next_song(self, error=None):
         if error:
-            raise VoiceError(str(error))
+            # raise VoiceError(str(error))
+            print(f"Error encountered while playing: {error}")
+            time.sleep(10)
         del self.current.source
         self.next.set()
