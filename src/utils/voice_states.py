@@ -21,6 +21,7 @@ class Song:
         self.source = None
 
     def create_embed(self):
+        print(f"Making embed for {self.title} - {self.url}")
         embed = discord.Embed(title=self.title, url=self.url)
         embed.set_author(name="Now Playing")
         embed.add_field(name="Duration", value=self.source.duration)
