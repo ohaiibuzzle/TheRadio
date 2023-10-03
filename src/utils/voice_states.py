@@ -99,7 +99,7 @@ class VoiceState:
             self.next.clear()
             self.current = self.playlist.get()
             if self.current.source is not None:
-                del self.current.source
+                self.current.source = None
             try:
                 self.current.source = (
                     await ytdlp_interface.YTDLPSource.from_url(
@@ -117,5 +117,5 @@ class VoiceState:
             # raise VoiceError(str(error))
             print(f"Error encountered while playing: {error}")
             time.sleep(10)
-        del self.current.source
+        self.current.source = None
         self.next.set()
