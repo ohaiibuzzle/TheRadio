@@ -22,4 +22,4 @@ typing_extensions==4.8.0
 uvloop==0.17.0
 websockets==11.0.3
 yarl==1.9.2
-yt-dlp==2023.9.24
+yt-dlp==2023.10.7
