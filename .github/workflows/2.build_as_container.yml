@@ -1,9 +1,11 @@
 name: Build nightly container and push to GHCR
 
 on:
-  push:
-    branches:
-      - senpai
+  workflow_run:
+    workflows: ["Test dependancy compatibility"]
+    branches: [senpai]
+    types: 
+      - completed
   workflow_dispatch:
 
 jobs:
