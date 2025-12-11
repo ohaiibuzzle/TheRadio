@@ -1,4 +1,4 @@
-aiodns==3.5.0
+aiodns==3.6.1
 orjson==3.11.3
 py-cord==2.4.1
 pycryptodome==3.23.0
