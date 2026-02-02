@@ -4,4 +4,4 @@ py-cord==2.4.1
 pycryptodome==3.23.0
 pynacl==1.6.1
 uvloop==0.21.0
-yt-dlp==2025.11.12
+yt-dlp==2026.1.31
